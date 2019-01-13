@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{%block content%}
+<div class="container">
+    <h1 class="text-center logo my-4">
+        
+    </h1>
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Profile Details</h3>
+                    <p> User Name : {{ user }} </p>
+                    <p>Email : {{ user.email }}</p>
+                </div>
+                <div class="card-footer text-muted text-center">
+                    Back to WebAppBlog? <a href="{% url 'home' %}">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

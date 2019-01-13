@@ -6,6 +6,9 @@
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">Log in</h3>
+                {% for message in messages %}
+                <p style="color: crimson">{{ message }} </p>
+                {% endfor %}
                 <form method="post" novalidate>
                     {% csrf_token %}
                     <input type="hidden" name="next" value="{{ next }}">
@@ -18,7 +21,7 @@
             </div>
             <div class="text-center py-2">
                 <small>
-                    <a href="#" class="text-muted">Forgot your password?</a>
+                    <a href="{% url 'password_reset' %}" class="text-muted">Forgot your password?</a>
                 </small>
             </div>
         </div>
